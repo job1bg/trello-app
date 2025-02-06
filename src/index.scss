@@ -8,6 +8,7 @@
 
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 .header {
@@ -145,6 +146,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow: hidden;
 
   .board-header {
     padding-left: 1rem;
@@ -159,5 +161,32 @@ body {
   .board-main {
     background-color: #666666;
     height: 100%;
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .container-main {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .card-main {
+    min-width: 15rem;
+    height: fit-content;
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+    background-color: rgb(30, 30, 30);
+  }
+
+  .list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem;
+  }
+
+  .list-item-button {
+    cursor: pointer;
   }
 }
