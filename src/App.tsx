@@ -1,7 +1,7 @@
 import "./App.scss";
-import { Header } from "./components/Header";
-import { Main } from "./components/Main";
-import { Sidebar } from "./components/Sidebar";
+import { Header } from "./components/Header/Header";
+import { Main } from "./components/Main/Main";
+import { Sidebar } from "./components/Sidebar/Sidebar";
 
 function App() {
   return (

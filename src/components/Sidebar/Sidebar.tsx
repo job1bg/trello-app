@@ -1,17 +1,20 @@
 import { useState } from "react";
-import "../index.scss";
-import { ChevronLeft } from "./asset-components/ChevronLeft";
-import { ChevronRight } from "./asset-components/ChevronRight";
-import { Plus } from "./asset-components/PlusIcon";
+import "../../index.scss";
+import { ChevronLeft } from "../asset-components/ChevronLeft";
+import { ChevronRight } from "../asset-components/ChevronRight";
+import { Plus } from "../asset-components/PlusIcon";
 
 export const Sidebar = () => {
   const [rotated, setRotated] = useState<boolean>(false);
+
+  const HandleRotateClick = () => setRotated(!rotated);
+
   return (
     <div className="sidebar">
       {rotated && (
         <div className="collapsed">
           <button
-            onClick={() => setRotated(!rotated)}
+            onClick={HandleRotateClick}
             className="chevron-button chevron-right"
           >
             <ChevronRight size={15}></ChevronRight>
@@ -23,7 +26,7 @@ export const Sidebar = () => {
           <div className="workspace">
             Workspace
             <button
-              onClick={() => setRotated(!rotated)}
+              onClick={HandleRotateClick}
               className="chevron-button chevron-left"
             >
               <ChevronLeft size={15}></ChevronLeft>
