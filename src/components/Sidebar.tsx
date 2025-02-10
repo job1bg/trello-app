@@ -14,7 +14,7 @@ export const Sidebar = () => {
             onClick={() => setRotated(!rotated)}
             className="chevron-button chevron-right"
           >
-            <ChevronRight width={15} height={15}></ChevronRight>
+            <ChevronRight size={15}></ChevronRight>
           </button>
         </div>
       )}
@@ -26,13 +26,13 @@ export const Sidebar = () => {
               onClick={() => setRotated(!rotated)}
               className="chevron-button chevron-left"
             >
-              <ChevronLeft width={15} height={15}></ChevronLeft>
+              <ChevronLeft size={15}></ChevronLeft>
             </button>
           </div>
           <div className="board">
             <div className="boardlist">Boards</div>
             <button className="plus-button">
-              <Plus width={15} height={15}></Plus>
+              <Plus size={15}></Plus>
             </button>
           </div>
           <ul className="board-ul">
