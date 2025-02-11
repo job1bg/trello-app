@@ -1,7 +1,5 @@
-import PlusIcon from "../../assets/plus-circle.svg";
+import { Plus } from "react-feather";
 
-export const Plus: React.FC<{
-  size: number;
-}> = ({ size }) => {
-  return <img src={PlusIcon} width={size} height={size} />;
+export const PlusIcon: React.FC<{ size: number }> = ({ size }) => {
+  return <Plus size={size} />;
 };

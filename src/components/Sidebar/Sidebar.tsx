@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "../../index.scss";
-import { ChevronLeft } from "../asset-components/ChevronLeft";
-import { ChevronRight } from "../asset-components/ChevronRight";
-import { Plus } from "../asset-components/PlusIcon";
+import { ChevronLeftIcon } from "../asset-components/ChevronLeft";
+import { ChevronRightIcon } from "../asset-components/ChevronRight";
+import { PlusIcon } from "../asset-components/PlusIcon";
 
 export const Sidebar = () => {
   const [rotated, setRotated] = useState<boolean>(false);
@@ -16,8 +16,9 @@ export const Sidebar = () => {
           <button
             onClick={HandleRotateClick}
             className="chevron-button chevron-right"
+            aria-label="expand sidebar"
           >
-            <ChevronRight size={15}></ChevronRight>
+            <ChevronRightIcon size={15} />
           </button>
         </div>
       )}
@@ -28,14 +29,15 @@ export const Sidebar = () => {
             <button
               onClick={HandleRotateClick}
               className="chevron-button chevron-left"
+              aria-label="collapse sidebar"
             >
-              <ChevronLeft size={15}></ChevronLeft>
+              <ChevronLeftIcon size={15} />
             </button>
           </div>
           <div className="board">
             <div className="boardlist">Boards</div>
             <button className="plus-button">
-              <Plus size={15}></Plus>
+              <PlusIcon size={15}></PlusIcon>
             </button>
           </div>
           <ul className="board-ul">

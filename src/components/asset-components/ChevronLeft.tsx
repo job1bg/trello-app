@@ -1,7 +1,5 @@
-import ChevronLeftIcon from "../../assets/chevron-left.svg";
+import { ChevronLeft } from "react-feather";
 
-export const ChevronLeft: React.FC<{
-  size: number;
-}> = ({ size }) => {
-  return <img src={ChevronLeftIcon} width={size} height={size} />;
+export const ChevronLeftIcon: React.FC<{ size: number }> = ({ size }) => {
+  return <ChevronLeft size={size} />;
 };
