@@ -3,11 +3,14 @@ import "../../index.scss";
 import { ChevronLeftIcon } from "../asset-components/ChevronLeft";
 import { ChevronRightIcon } from "../asset-components/ChevronRight";
 import { PlusIcon } from "../asset-components/PlusIcon";
+import AddBoardPopover from "../AddBoardPopover/AddBoardPopover";
 
 export const Sidebar = () => {
   const [rotated, setRotated] = useState<boolean>(false);
+  const [openPopover, setOpenPopover] = useState<boolean>(false);
 
   const HandleRotateClick = () => setRotated(!rotated);
+  const toggleNewBoardPopover = () => setOpenPopover(!openPopover);
 
   return (
     <div className="sidebar">
@@ -36,9 +39,10 @@ export const Sidebar = () => {
           </div>
           <div className="board">
             <div className="boardlist">Boards</div>
-            <button className="plus-button">
+            <button className="plus-button" onClick={toggleNewBoardPopover}>
               <PlusIcon size={15}></PlusIcon>
             </button>
+            {openPopover && <AddBoardPopover onClose={toggleNewBoardPopover} />}
           </div>
           <ul className="board-ul">
             <li>
