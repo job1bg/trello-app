@@ -22,7 +22,7 @@ export const Sidebar = () => {
   };
   const [boardData, setBoardData] = useState<Board>(emptyBoard);
 
-  const HandleRotateClick = () => setRotated(!rotated);
+  const handleRotateClick = () => setRotated(!rotated);
   const toggleNewBoardPopover = () => setOpenPopover(!openPopover);
 
   const onCreateBoard = () => {
@@ -44,7 +44,7 @@ export const Sidebar = () => {
       {rotated ? (
         <div className="collapsed">
           <button
-            onClick={HandleRotateClick}
+            onClick={handleRotateClick}
             className="chevron-button chevron-right"
             aria-label="expand sidebar"
           >
@@ -56,7 +56,7 @@ export const Sidebar = () => {
           <div className="workspace">
             Workspace
             <button
-              onClick={HandleRotateClick}
+              onClick={handleRotateClick}
               className="chevron-button chevron-left"
               aria-label="collapse sidebar"
             >
@@ -72,7 +72,7 @@ export const Sidebar = () => {
               <AddBoardPopover
                 boardData={boardData}
                 setBoardData={setBoardData}
-                onClose={onCreateBoard}
+                onCreateBoard={onCreateBoard}
               />
             )}
           </div>
@@ -83,7 +83,6 @@ export const Sidebar = () => {
                   onClick={() => setActiveboard(i)}
                   className="board-button"
                 >
-                  <div className="list-item-disc" />
                   <span
                     className="color-box"
                     style={{ backgroundColor: x.bgcolor }}

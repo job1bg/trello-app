@@ -1,7 +1,7 @@
 import { Board } from "./boardTypes";
 
 export type AddBoardPopoverType = {
-  onClose: () => void;
+  onCreateBoard: () => void;
   boardData: Board;
   setBoardData: (board: Board) => void;
 };

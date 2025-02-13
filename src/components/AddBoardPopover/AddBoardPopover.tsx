@@ -3,7 +3,7 @@ import "../../index.scss";
 import { AddBoardPopoverType } from "../../types/popoverTypes";
 
 const AddBoardPopover: React.FC<AddBoardPopoverType> = ({
-  onClose,
+  onCreateBoard,
   boardData,
   setBoardData,
 }) => {
@@ -37,7 +37,7 @@ const AddBoardPopover: React.FC<AddBoardPopoverType> = ({
           className="color-input"
         />
       </div>
-      <button className="create-board-button" onClick={onClose}>
+      <button className="create-board-button" onClick={onCreateBoard}>
         Create
       </button>
     </div>
