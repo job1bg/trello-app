@@ -5,7 +5,7 @@ import { ChevronRightIcon } from "../asset-components/ChevronRight";
 import { PlusIcon } from "../asset-components/PlusIcon";
 import AddBoardPopover from "../AddBoardPopover/AddBoardPopover";
 import { BoardsContext } from "../context/BoardsContext";
-import { Board, BoardData } from "../../types/boardTypes";
+import { Board, BoardDataType } from "../../types/boardTypes";
 
 export const Sidebar = () => {
   const emptyBoard: Board = {
@@ -17,8 +17,8 @@ export const Sidebar = () => {
   const [rotated, setRotated] = useState<boolean>(false);
   const [openPopover, setOpenPopover] = useState<boolean>(false);
   const { board, setBoard } = useContext(BoardsContext) as {
-    board: BoardData;
-    setBoard: (board: BoardData) => void;
+    board: BoardDataType;
+    setBoard: (board: BoardDataType) => void;
   };
   const [boardData, setBoardData] = useState<Board>(emptyBoard);
 

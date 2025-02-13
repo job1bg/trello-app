@@ -2,10 +2,10 @@ import { Edit3 } from "react-feather";
 import AddCard from "../AddCard/AddCard";
 import { BoardsContext } from "../context/BoardsContext";
 import { useContext } from "react";
-import { BoardData } from "../../types/boardTypes";
+import { BoardDataType } from "../../types/boardTypes";
 
 export const Main = () => {
-  const { board } = useContext(BoardsContext) as { board: BoardData };
+  const { board } = useContext(BoardsContext) as { board: BoardDataType };
 
   const boardData = board.boards[board.active];
 

@@ -15,7 +15,7 @@ export type Item = {
     list: List[];
   };
   
-  export type BoardData = {
+  export type BoardDataType = {
     active: number;
     boards: Board[];
   };
